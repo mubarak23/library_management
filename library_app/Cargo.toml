@@ -1,0 +1,9 @@
+[package]
+name = "library_app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+library_inventory = { path = "../library_inventory"}
+library_users = { path = "../library_users"}
+library_borrowing = { path = "../library_borrowing"}
