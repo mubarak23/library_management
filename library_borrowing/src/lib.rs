@@ -15,10 +15,6 @@ pub struct BorrowingService {
 
 impl BorrowingService{
 
-    // pub fn new(inventory:  &`a mut Inventory, user_manager: &`a mut UserManager) 
-    // pub fn new(inventory:  &'a mut Inventory, user_manager: &'a mut UserManager) -> Self {
-    //     Self {  inventory, user_manager}
-    // }
     pub fn new() -> Self {
         Self {}
     }
@@ -51,34 +47,7 @@ impl BorrowingService{
        let _ = inventory.update_book_availability(book_id, true);
         Ok(())
     }
-    // pub fn borrow_book(&mut self, user_id: u32, book_id: u32) -> Result<(), String> {
-    //     let book = self.inventory.get_book(book_id);
-    //     if let Some(book) = book {
-    //         if !book.is_available{
-    //             return Err(String::from("Book is not available"));
-    //         }
-    //     } else {
-    //         return Err(String::from("Book Not Found"));
-    //     }
-
-    //  if let Some(user) = self.user_manager.get_user(user_id) {
-    //     if user.borrowed_books.len() >= 3 {
-    //         return Err(String::from("Cannot Borrow More than three books"));
-    //     } else {
-    //         return Err(String::from("User Not Found"));
-    //     }
-    //  }
-    //  self.inventory.get_book(book_id).unwrap().is_available;
-    //  self.inventory.update_book_availability(book_id, false); 
-    //  self.user_manager.borrow_book(book_id, user_id);
-    //  Ok(())
-    // }
-
-    // pub fn return_book(&mut self, user_id: u32, book_id: u32) -> Result<(), String> {
-    //     self.user_manager.return_book(book_id, user_id);
-    //     self.inventory.get_book(book_id).unwrap().is_available;
-    //     Ok(())
-    // }
+   
 }
 
 
